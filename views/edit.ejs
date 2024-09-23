@@ -1,0 +1,15 @@
+<main>
+<head>
+    <link href= "/public/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<%- include("partials/header.ejs") %>
+<div class="edit-form">
+<form action="/update/<%= blog.id %>" method="POST">
+    <input class="edit-title" type="text" name="blogTitle" value="<%= blog.title %>" required>
+    <textarea class="edit-des" name="blogDes" required><%= blog.description %></textarea>
+    <button type="submit">Update Blog</button>
+</form>
+</div>
+<%- include("partials/footer.ejs") %>
+</main>
